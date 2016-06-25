@@ -14,7 +14,7 @@
 			read cheatsheet
 *******************************************************************			
 
-##example##
+##Example##
 	\documentclass[10pt]{article}
 	\usepackage{latexemoji}
 	\usepackage{graphics}
@@ -29,7 +29,7 @@
 		
 		Good bye! \latexemoji{wave}
 	\end{document}
-##output##
+##Output##
 
 ![Output image of above latex script](output.jpg?raw=true "output image")
 

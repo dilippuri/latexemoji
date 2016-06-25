@@ -1,0 +1,38 @@
+%%%%this file is written for latexemoji style file.
+%%%%this file is written by Dilip Puri IIIT-Vadodara
+%%%% file latexemoji.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{latexemoji}[25/06/2016 v0.0 emoji for latex]
+
+% some package require for this style file
+\RequirePackage{graphicx,stringenc}
+\RequirePackage{xparse,l3regex}
+\RequirePackage[utf8x]{inputenc}
+\RequirePackage[export]{adjustbox}
+\RequirePackage{amsmath}
+
+%syntax exception on
+\ExplSyntaxOn
+\tl_const:Nn \c_latexemoji_dir_tl {emoji_pics }
+\tl_new:N \l_latexemoji_input_tl
+
+\cs_new_protected:Npn \latexemoji_eightbit:n #1
+ {
+  \StringEncodingConvert \l_latexemoji_input_tl
+    { \tl_to_str:n { #1 } } { utf8 } { utf32 }
+  \tl_set:Nx \l_latexemoji_input_tl { \pdfescapehex\expandafter{\l_latexemoji_input_tl} }
+  \regex_replace_once:nnN { \A 0* } { } \l_latexemoji_input_tl
+  \text{%
+  \includegraphics[width=1em,valign=t,raise=-0.1em]{\c_latexemoji_dir_tl / \l_latexemoji_input_tl.pdf}%
+  }%
+ }
+
+\bool_if:nTF { \xetex_if_engine_p: || \luatex_if_engine_p: }
+  {
+   \cs_set_eq:NN \latexemoji \latexemoji_unicode:n
+  }
+  {
+   \cs_set_eq:NN \latexemoji \latexemoji_eightbit:n
+  }
+%syntax exception off
+\ExplSyntaxOff

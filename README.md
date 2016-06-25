@@ -1,12 +1,12 @@
 # Use emoji in LaTeX #
 *******************************************************************			
 
-##Installing##:
+##Installing##
 	download latexemoji folder from git
 	store emoji_pics folder and latesemoji style file where your .tex is stored
 *******************************************************************			
 
-##Usage##:
+##Usage##
 	include package by
 		\usepackage{latexemoji}
 	to include emoji in document
@@ -14,7 +14,7 @@
 			read cheatsheet
 *******************************************************************			
 
-##example##:
+##example##
 	\documentclass[10pt]{article}
 	\usepackage{latexemoji}
 	\usepackage{graphics}
@@ -29,6 +29,6 @@
 		
 		Good bye! \latexemoji{wave}
 	\end{document}
-##output##:
-	![Output image of above latex script](output.jpg?raw=true)
+##output##
+	![Output image of above latex script](output.png?raw=true)
 *******************************************************************			

@@ -2,7 +2,7 @@
 *******************************************************************			
 
 ##Installing##
-	download latexemoji folder from git
+	download latexemoji folder from git:-  https://github.com/dilippuri/latexemoji.git
 	store emoji_pics folder and latesemoji style file where your .tex is stored
 *******************************************************************			
 

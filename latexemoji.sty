@@ -13,7 +13,7 @@
 
 %syntax exception on
 \ExplSyntaxOn
-\tl_const:Nn \c_latexemoji_dir_tl {emoji_pics }
+\tl_const:Nn \c_latexemoji_dir_tl {emoji_images }
 \tl_new:N \l_latexemoji_input_tl
 
 \cs_new_protected:Npn \latexemoji_eightbit:n #1
@@ -23,7 +23,7 @@
   \tl_set:Nx \l_latexemoji_input_tl { \pdfescapehex\expandafter{\l_latexemoji_input_tl} }
   \regex_replace_once:nnN { \A 0* } { } \l_latexemoji_input_tl
   \text{%
-  \includegraphics[width=1em,valign=t,raise=-0.1em]{\c_latexemoji_dir_tl / \l_latexemoji_input_tl.pdf}%
+  \includegraphics[width=1em,valign=t,raise=-0.1em]{\c_latexemoji_dir_tl / {#1}.pdf}%\l_latexemoji_input_tl.pdf}
   }%
  }
 

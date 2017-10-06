@@ -1,6 +1,9 @@
 # Use emoji in LaTeX #
 *******************************************************************			
 
+[![Code Triagers Badge](https://www.codetriage.com/dilippuri/latexemoji/badges/users.svg)](https://www.codetriage.com/dilippuri/latexemoji)
+
+
 ##Installing##
 	download latexemoji folder from git:-  https://github.com/dilippuri/latexemoji.git
 	store emoji_pics folder and latesemoji style file where your .tex is stored

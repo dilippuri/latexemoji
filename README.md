@@ -34,5 +34,5 @@
 	\end{document}
 ##Output##
 ![Output image of above latex script](output.jpg?raw=true "output image")
-:pray:
+really cool repo :pray:
 *******************************************************************			
